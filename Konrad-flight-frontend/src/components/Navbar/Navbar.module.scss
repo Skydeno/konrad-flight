@@ -1,0 +1,59 @@
+.container {
+  width: 100%;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+}
+
+.right {
+  display: flex;
+}
+
+.navbarLogo {
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  span {
+    font-size: 40px;
+    transform: rotate(45deg);
+  }
+
+  .logo {
+    align-self: center;
+    margin: 0;
+  }
+}
+
+.navbarElement {
+  width: 100px;
+  text-align: center;
+  display: flex;
+}
+
+.navbarElementText {
+  margin: 0 auto;
+  align-self: center;
+}
+
+.navbarElementLogin {
+  width: 100px;
+  text-align: center;
+  display: flex;
+}
+
+.navbarClock {
+  width: 100px;
+  text-align: center;
+  display: flex;
+  align-self: center;
+  margin: 0 auto;
+  height: 50px;
+}
