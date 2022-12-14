@@ -1,18 +1,23 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import classes from "./Navbar.module.scss";
 import { Clock } from "../Clock/Clock";
+import { Link } from "react-router-dom";
 import "material-icons/iconfont/outlined.css";
 
-export const Navbar = () => {
+export const Navbar = (): ReactElement => {
   return (
     <div className={classes.container}>
       <div className={classes.left}>
         <div className={classes.navbarLogo}>
-          <span class="material-icons-outlined">airplanemode_active</span>
-          <h1 className={classes.logo}>Konradflight</h1>
+          <Link to="/" className={classes.link}>
+            <span className="material-icons-outlined">airplanemode_active</span>
+            <h1 className={classes.logo}>Konradflight</h1>
+          </Link>
         </div>
         <div className={classes.navbarElement}>
-          <p className={classes.navbarElementText}>Opcja1</p>
+          <Link to="/airlines" className={classes.link}>
+            <p className={classes.navbarElementText}>Linie lotnicze</p>
+          </Link>
         </div>
         <div className={classes.navbarElement}>
           <p className={classes.navbarElementText}>Opcja2</p>
@@ -26,7 +31,9 @@ export const Navbar = () => {
       </div>
       <div className={classes.right}>
         <div className={classes.navbarElementLogin}>
-          <p className={classes.navbarElementText}>Login</p>
+          <Link to="/login" className={classes.link}>
+            <p className={classes.navbarElementText}>Login</p>
+          </Link>
         </div>
         <div className={classes.navbarClock}>
           <Clock />
